@@ -13,6 +13,7 @@ Este relatório tem em vista analisar como é feita a Gestão de Requisitos do p
 
 #### Elicitação de Requisitos
 Quero ficar com esta parte. - PAULO
+blablabla requisitos
 #### Análise de Requisitos e Negociação
 
 #### Especificação de Requisitos
