@@ -59,9 +59,41 @@ esse contexto. A mais basica de todas é a *"PC Facade"* que executa o jogo como
 
 *Modules* tem acesso a uma parte limitada da *engine* através da *Modding API*. 
 
+#### Vista de Deployment
 
 
+Através do diagrama de *deployment* pode-se entender que o jogo pode ser jogado em modo Single-player como Multi-player. 
+O *device* PC que executa e corre o jogo Terasology pode ser realizado através de um *local server* ou *dedicated server*. 
+O *local server* pode apenas ser acedido por dispositivos na *local area network - LAN*. Em relação ao servidor principal, neste 
+caso apenas é possível executar e jogar através de uma ligação à Internet, logo pode ser acedido por várias redes em áreas geográficas
+diferentes. 
+No *local server* qualquer novo jogador que pretenda entrar no jogo, assim que inícia a sessão passa a acompanhar de imediato os restantes
+jogadores presentes, do mesmo modo que o jogo Minecraft, ao passo que no servidor principal apenas obtém a informação relativa
+à sessão corrente.
 
+#### Conclusão
+
+Os diagramas desenvolvidos e estruturados no âmbito do trabalho de *Architectural Design* tiveram em vista compreender 
+de forma geral e estruturada os elementos de *software* que incorporam o jogo Terasology, bem como as suas relações e propriedades.
+
+Apresentando os modelos de vistas:
+A Vista Lógica é elaborada por um diagrama de pacotes, onde se apresenta as principais abstrações do sistema
+o qual mostra as várias unidades lógicas e as dependências entre si existentes no jogo. 
+
+A Vista de Implementação, está expressa por um diagrama de componentes, que representa o modo como os componentes de um sistema de
+*software*, neste caso o Terasology, estão relacionados entre si.
+
+Quanto à vista de processo, neste diagrama de atividades, foram apresentados os aspetos dinâmicos do funcionamento do
+jogo Terasology.
+
+A vista de deployment, o diagrama de *deployment* pretendeu exibir de que modo são distribuídos os artefactos 
+correspondentes aos componentes de *software*, que estão especificados na vista de implementação, 
+em componentes - nós - de hardware, permitindo uma melhor noção sobre o modo de funcionamento do jogo. 
+
+Apesar de o jogo Terasology inicialmente não estabelecer formalmente qualquer *Architectural Design*, com o aparecimento 
+do colaborador *Immortius* a assumir o papel de *Lead Architect*, permitiu-nos analisar e visualizar com alguma clareza a informação
+necessária à construção dos diagramas aqui expostos, possibilitando-nos apresentar uma descrição arquitectural
+onde enfatiza os requisitos e vistas arquitecturais, interfaces e componentes, bem como as tecnologias usadas.
 
 ##### Referências
 [Wikipédia](https://en.wikipedia.org/wiki/4%2B1_architectural_view_model)
