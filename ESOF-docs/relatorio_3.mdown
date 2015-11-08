@@ -121,9 +121,15 @@ O Terasology começou por ser uma *tech demo* até se tornar um jogo, sem uma ar
 se tornou *Lead Software Architect* e começou a definir alguns objectivos de *Arquitecture Design*. Muitos desses objectivos 
 já foram alcançados e a medida que o projecto vai crescendo definem-se novos objetivos. Apesar de este projecto
 ainda estar em fase de desenvolvimento consideramos que a arquitectursa 
-do terasology é bastante organizada e que é a estrutura principal deste projecto.
+do terasology é bastante organizada e que é a estrutura principal deste projecto. 
 
+Gostariamos de salientar que a arquitetura deste projecto engloba uma *entity systems architecture* que é a base
+da *engine*.
 
+O código base está bem estruturado e organizado em *packages*.
+
+É da nossa opinião que este projecto está a ser bem estruturado e de maneira organizada permitindo adicionar, 
+modificar e retirar componentes de modo modular.
 
 ##### Referências
 [Wikipédia](https://en.wikipedia.org/wiki/4%2B1_architectural_view_model)
