@@ -1,42 +1,38 @@
 # ESOF
-# RELATÓRIO 3 - *Architectural Design*
+# RELATÓRIO 3 - *Software Architecture*
 ## Terasology
 
 #### Introdução
 
-Neste relatório iremos abordar o tema de *Architecture Design* em engenharia de *software*, e identificar
-os vários aspectos de organização que o sistema deste projecto engloba.
+Neste relatório iremos abordar o tema de [Software Architecture](https://msdn.microsoft.com/en-us/library/ee658098.aspx) em engenharia de *software*, a qual consiste na organização 
+de um sistema de *software*, incluindo a selecção dos elementos estruturais e as interfaces na qual o sistema é composto.
 
-*Architectural design* consiste na organização de um sistema de *software*, criando estruturas e documentação
-para essas estruturas. Cada estrutura é composta por elementos de *software*, as relações entre esses elementos e 
-propriedades entre os mesmos.
+#### *Software Architecture* do Terasology
 
-#### *Architectural Design* do Terasology
+A arquitectura de software no Terasology, apesar de não estabelecer uma formalização definida de início, com o desenvolvimento do 
+projecto, os colaboradores sentiram necessidade de criar e definir o seu próprio [*Entity System Architecture*](https://github.com/MovingBlocks/Terasology/wiki/Entity-System-Architecture)
+para uma melhor orientação e organização dos elementos estruturais.
 
-Alguns dos principais objectivos da arquitetura do terasology são:
-* Uma forte componente para supote de [*modding*](https://en.wikipedia.org/wiki/Mod_(video_gaming)), existindo um número de
-razões para tal:
- * Evitar conflitos.
- * Permitir a introdução de novas funcionalidades fora da *engine* (não havendo necessidade de alterar o ficheiro .jar).
- * Permite *modding* sem codificação em java.
- * Codificar em modulos de maneira a que seja fácil de usar, poderoso e fácil de conectar a sistemas existentes.
- * Resiliente a erros e mudança. Um erro ocurrido num *mod* não deverá interrumper o funcionamento do jogo. Se um *mod*
- for atualizado com componentes alterados, se exitirem *saves* não deveram sufrer roturas.
- * Ser rasoavelmente seguro.
- 
-* Separação entre as preocupações da *engine* e da lógica do jogo/*assets*. A *engine* deve-se preocupar com as *core features* 
-como *rendering*, som e *world support*. A lógica do jogo vem através dos modulos, o que significa que qualquer modulo pode ser 
-alterado para alcançar um objectivo diferente no jogo.
+Alguns dos principais objectivos da arquitetura do *Terasology* estão definidos no seu próprio [*forum*](http://forum.terasology.org/threads/architecture-vision.690/)
+onde podemos dar realce a alguns que nos parecem relevantes destacar:
 
-#### Modelo de vistas 4 + 1
+####1 
+Capacidade [*modding*](https://en.wikipedia.org/wiki/Mod_(video_gaming)), com o objectivo de evitar possíveis conflitos;
+introduzir novas funcionalidades; introdução de comportamentos novos no jogo; maior capacidade de resistência a potenciais erros
+e alterações; segurança em particular para quem faz *downloads* de *plugins* dos servidores dedicados. 
+####2 
+Separação no que diz respeito à *engine* e da lógica *game/assets*. A *engine* deve-se centrar com as características e funcionalidades 
+como *rendering*, som e *voxel world support*. 
+A lógica do jogo é alcançada através de *modularity*, o que permite alterar qualquer conjunto de módulos com vista
+a poder efectuar alterações ao modo de jogo.
 
-Iremos usar o modelo de vistas 4 + 1, para descrever a organização deste projecto.
+O modelo pelo qual decidimos abordar a arquitectura do *Terasology* será através do [Modelo De Vistas 4 + 1](https://en.wikipedia.org/wiki/4%2B1_architectural_view_model):
 
-* Vista Lógica
-* Vista de Implementação
-* Vista do Processo
-* Vista de *Deployment*
-* Vista de Casos de Utilização (foi entregue no 2º relatório)
+* Vista Lógica - Diagrama de Pacotes
+* Vista de Implementação - Diagrama de Componentes
+* Vista do Processo - Diagrama de Atividades
+* Vista de *Deployment* - Diagrama de *Deployment*
+* Vista de Casos de Utilização (definido no 2º relatório).
 
 #### Vista Lógica
 ##### Diagrama de *packages*
