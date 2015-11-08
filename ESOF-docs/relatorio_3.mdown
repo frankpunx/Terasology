@@ -96,8 +96,12 @@ ao mesmo *event*.
 
 #### Vista do Processo
 ##### Diagrama de Atividade
+Mostra as etapas de processamento no decorrer do processo.
 
 ![Activity Diagram](https://github.com/frankpunx/Terasology/blob/master/ESOF-docs/diagrama_actividade.PNG)
+
+Este diagrama é um exemplo de representação das etapas de processamento do sistema. Ilustrando as principais 
+fases do jogo e as ligações com a estrutura principal do projecto. 
 
 #### Vista de *Deployment*
 ##### Diagrama de *Deployment*
@@ -113,6 +117,12 @@ Também é possível jogar o terasology no web browser do utilizador correndo-o 
 
 
 #### Conclusão
+O Terasology começou por ser uma *tech demo* até se tornar um jogo, sem uma arqitectura definida. Até que um dos membro 
+se tornou *Lead Software Architect* e começou a definir alguns objectivos de *Arquitecture Design*. Muitos desses objectivos 
+já foram alcançados e a medida que o projecto vai crescendo definem-se novos objetivos. Apesar de este projecto
+ainda estar em fase de desenvolvimento consideramos que a arquitectursa 
+do terasology é bastante organizada e que é a estrutura principal deste projecto.
+
 
 
 ##### Referências
@@ -126,7 +136,7 @@ Slides das aulas teóricas
 #### Lista dos contribuidores 
 
 #####Grupo 6
-* Francisco Veiga
+* Francisco Veiga (10 horas)
 * Paulo Peixoto (0 horas)
 * Vasco Pereira (0 horas)
 * Filipe Galvão (0 horas)
