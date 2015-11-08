@@ -16,11 +16,11 @@ para uma melhor orientação e organização dos elementos estruturais.
 Alguns dos principais objectivos da arquitetura do *Terasology* estão definidos no seu próprio [*forum*](http://forum.terasology.org/threads/architecture-vision.690/)
 onde podemos dar realce a alguns que nos parecem relevantes destacar:
 
-####1 
+####1) 
 Capacidade [*modding*](https://en.wikipedia.org/wiki/Mod_(video_gaming)), com o objectivo de evitar possíveis conflitos;
 introduzir novas funcionalidades; introdução de comportamentos novos no jogo; maior capacidade de resistência a potenciais erros
 e alterações; segurança em particular para quem faz *downloads* de *plugins* dos servidores dedicados. 
-####2 
+####2)
 Separação no que diz respeito à *engine* e da lógica *game/assets*. A *engine* deve-se centrar com as características e funcionalidades 
 como *rendering*, som e *voxel world support*. 
 A lógica do jogo é alcançada através de *modularity*, o que permite alterar qualquer conjunto de módulos com vista
