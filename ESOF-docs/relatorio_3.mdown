@@ -95,6 +95,9 @@ A vantagem de usar *events* entre *systems* em vez de chamada a métodos, é que
 ao mesmo *event*.
 
 #### Vista do Processo
+##### Diagrama de Atividade
+
+![Activity Diagram](https://github.com/frankpunx/Terasology/blob/master/ESOF-docs/diagrama_actividade.PNG)
 
 #### Vista de *Deployment*
 ##### Diagrama de *Deployment*
@@ -103,8 +106,8 @@ Mostra *hardware nodes*, relações de comunicação e *software artifacts* impl
 ![Deployment Diagram](https://github.com/frankpunx/Terasology/blob/master/ESOF-docs/dep_diagram.PNG)
 
 Este sistema pode ser visualizado como *hardware* e *sofatware* que o implementa.
-Como já tinhamos descrito no relatório anterior além do modo de *single player* também é possivél a ligação a outros Pc's, para 
-jogar em rede, podendo ser qualquer um dos despositivos ligados à rede o servidor local.
+Como já tinhamos descrito no relatório anterior além do modo de *single player* também é possível a ligação em 
+rede com outros Pc's através de um servidor local.
 
 Também é possível jogar o terasology no web browser do utilizador correndo-o como um applet.
 
