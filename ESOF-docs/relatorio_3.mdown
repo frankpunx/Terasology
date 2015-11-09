@@ -36,10 +36,30 @@ O modelo pelo qual decidimos abordar a arquitectura do *Terasology* será atrav�
 
 #### Vista Lógica
 ##### Diagrama de *packages*
-Mostra as abstrações-chave no sistema como
-objetos ou classes de objetos, ou seus *packages*.
 
-![Packages Diagram](https://github.com/frankpunx/Terasology/blob/master/ESOF-docs/packages.PNG)
+O [Diagrama de Pacotes](https://en.wikipedia.org/wiki/Package_diagram) tem como principal função apresentar as principais 
+abstrações do sistema existente em Terasology, explicitando os pacotes mais relevantes definidos e as dependências 
+existentes no mesmo.
+
+![Diagrama de Pacotes](./Resources/<nome do ficheiro.png)
+
+####Interpretação
+
+No diagrama exposto ilustra-se vários [*Packages*](https://github.com/MovingBlocks/Terasology/wiki/Codebase-Structure) que respeitam a estrutura Terasoly.
+Devido à sua dimensão ser um pouco extensa, cabe-nos explitar apenas os que consideramos relevantes para o *core* do 
+funcionamento do Terasology.
+Assim, como entrada do jogo o temos *Package* *game* que utiliza o *Package* *engine* para se iniciar
+o jogo, em que neste caso é o *Package* responsável por todo o desenrolar do jogo. 
+O *Package* *facade* neste caso em concreto é utilizado como *wrapper* do *engine* uma vez que é o que permite correr
+o jogo como aplicação nos vários Sistemas Operativos dos *users*, já que o *engine* por si só não é executável.
+As *Mods* são modificações que o utilizador pode efectuar ao jogo.
+Quanto aos *Modules*, estes são contentores de código e *assets* que podem ser usados nos *game types*, tendo também 
+acesso a uma parte limitada à *engine* através da *Modding API*.
+Em relação a outros *Packages*, não os destacamos aqui de forma particular, mas realçamos o seu valor holístico no 
+sistema Terasology.
+
+
+
 
 O *package* principal no Terasology é o *Engine* e todas as *facades* e *modules* dependem dele.
 O *core engine* está focado em recursos como: *Entity System*, *Renderimg*, *Physics*, etc.
