@@ -58,24 +58,6 @@ acesso a uma parte limitada à *engine* através da *Modding API*.
 Em relação a outros *Packages*, não os destacamos aqui de forma particular, mas realçamos o seu valor holístico no 
 sistema Terasology.
 
-
-
-
-O *package* principal no Terasology é o *Engine* e todas as *facades* e *modules* dependem dele.
-O *core engine* está focado em recursos como: *Entity System*, *Renderimg*, *Physics*, etc.
-
-A maior peça de arquitetura da *engine* é a *Entity System* que é o motor de quase tudo no Terasology.
-
-Os outros *packages* são PC Facades e Core Module.
-
-A *engine* por si só não é executável. Precisa de ser executada num determinado contexto - *"facades"* (front-ends) fornecem 
-esse contexto. A mais basica de todas é a *"PC Facade"* que executa o jogo como uma aplicação nos diversos sitemas operativos.
-
-*"Mods"* são modificações feitas a um jogo pelo utilizador, os *modules* são um pouco mais fundamentais. *Modules* são
-*containers* para código e *assets* que podem ser usados por *game types*, *mods* ou outros conceitos de alto nível.
-
-*Modules* tem acesso a uma parte limitada da *engine* através da *Modding API*. 
-
 #### Vista de Implementação
 ##### Diagrama de componentes
 Mostra os componentes de *software* e as dependências entre eles.
