@@ -41,7 +41,7 @@ O [Diagrama de Pacotes](https://en.wikipedia.org/wiki/Package_diagram) tem como 
 abstrações do sistema existente em Terasology, explicitando os pacotes mais relevantes definidos e as dependências 
 existentes no mesmo.
 
-![Diagrama de Pacotes](./Resources/<nome do ficheiro.png)
+![Diagrama de Pacotes](./Resources/<nome do ficheiro>.png)
 
 ####Interpretação
 
