@@ -1,135 +1,135 @@
 # ESOF
-# RELAT”RIO 4 - Testes de *Software* 
+# RELAT√ìRIO 4 - Testes de *Software* 
 ## Terasology
 
-#### IntroduÁ„o
+#### Introdu√ß√£o
 
-Neste relatÛrio iremos abordar o tema de Testes de *Software* em engenharia de *software*, e identificar alguns aspectos
-relacionados com o nÌvel de testabilidade deste projecto, assim como, iremos analisar algumas estatÌsticas de testes realizados.
+Neste relat√≥rio iremos abordar o tema de Testes de *Software* em engenharia de *software*, e identificar alguns aspectos
+relacionados com o n√≠vel de testabilidade deste projecto, assim como, iremos analisar algumas estat√≠sticas de testes realizados.
 
-Os testes de *software* permitem obter informaÁıes acerca do produto que est· a ser testado. Est· È uma fase muito importante 
-no desenvolvimento de *software*, permite aos participantes no desenvolvimento do produto detetar possÌveis erros e falhas 
+Os testes de *software* permitem obter informa√ß√µes acerca do produto que est√° a ser testado. Est√° √© uma fase muito importante 
+no desenvolvimento de *software*, permite aos participantes no desenvolvimento do produto detetar poss√≠veis erros e falhas 
 melhorando, assim, a qualidade do produto.
 
-Os testes de software podem passar por v·rias fases de testes sendo elas: testes unit·rios, testes de integraÁ„o, 
-testes de sistema, testes de aceitaÁ„o e testes de operaÁ„o, etc.
+Os testes de software podem passar por v√°rias fases de testes sendo elas: testes unit√°rios, testes de integra√ß√£o, 
+testes de sistema, testes de aceita√ß√£o e testes de opera√ß√£o, etc.
 
 #### Grau de Testabilidade Terasology
 
-O Terasology sendo um projecto de pequena dimens„o e de *open sorce* funcionado, quase, de forma "experimental" n„o È submetido
-a testes de *software* rigorosos. Das v·rias fases de teste o terasology È apenas submetido a testes unit·rios feitos pelos 
-progamadores, que do nosso ponto de vista s„o insufecientes para garantir uma excelente qualidade do *software*. Seriam 
-necess·rios os outros testes para que isso acontece-se, contudo, sÛ efetuar testes n„o garante que o *software* esteja livre de erros.
+O Terasology sendo um projecto de pequena dimens√£o e de *open sorce* funcionado, quase, de forma "experimental" n√£o √© submetido
+a testes de *software* rigorosos. Das v√°rias fases de teste o terasology √© apenas submetido a testes unit√°rios feitos pelos 
+progamadores, que do nosso ponto de vista s√£o insufecientes para garantir uma excelente qualidade do *software*. Seriam 
+necess√°rios os outros testes para que isso acontece-se, contudo, s√≥ efetuar testes n√£o garante que o *software* esteja livre de erros.
 
-Como o referido no relatÛrio anterior a arquitectura deste projecto suporta *modding*, sendo esta arquitectura reseliente 
-a erros e mudanÁas, isto È, se ‡ vers„o atual que est· em funcionamento for adicionado um mÛdulo que contenha *bugs* ou erros, 
-este n„o dever· parar o resto do funcionamento da *engine*. Este È um aspecto favor·vel na deteÁ„o de erros, se ao testar um 
-mÛdulo for detetado um erro sempre se pode excluir este mÛdulo atÈ esse erro ser corrigido.
+Como o referido no relat√≥rio anterior a arquitectura deste projecto suporta *modding*, sendo esta arquitectura reseliente 
+a erros e mudan√ßas, isto √©, se √† vers√£o atual que est√° em funcionamento for adicionado um m√≥dulo que contenha *bugs* ou erros, 
+este n√£o dever√° parar o resto do funcionamento da *engine*. Este √© um aspecto favor√°vel na dete√ß√£o de erros, se ao testar um 
+m√≥dulo for detetado um erro sempre se pode excluir este m√≥dulo at√© esse erro ser corrigido.
 
-A maior parte dos testes unit·rios utilizados no Terasology s„o cÛdificados em JUnit e s„o executados sempre que h· um *engine build* 
-ou alguÈm faz um *pull request*. Desta forma os gestores do projecto conseguem perceber se todo o cÛdigo que cobriram com 
-os testes unit·rios continua a funcionar depois do *pull request* ou do *engine build*, contudo Cervator admite que os 
-prÛpios testes podem ter erros, o que uma vez mais indica a insufeciÍncia e a "qualidade" de testes neste projecto. Estes testes 
-tambÈm ajudam a perceber se um determinado *pull request* falha um destes testes ou se as mÈtricas pioraram.
+A maior parte dos testes unit√°rios utilizados no Terasology s√£o c√≥dificados em JUnit e s√£o executados sempre que h√° um *engine build* 
+ou algu√©m faz um *pull request*. Desta forma os gestores do projecto conseguem perceber se todo o c√≥digo que cobriram com 
+os testes unit√°rios continua a funcionar depois do *pull request* ou do *engine build*, contudo Cervator admite que os 
+pr√≥pios testes podem ter erros, o que uma vez mais indica a insufeci√™ncia e a "qualidade" de testes neste projecto. Estes testes 
+tamb√©m ajudam a perceber se um determinado *pull request* falha um destes testes ou se as m√©tricas pioraram.
 
-O Terasology usa uma ferramenta chamada [Jenkins](http://jenkins.terasology.org/job/Terasology/) para efectuar os testes unit·rios. Para alÈm dos testes unit·rios o Terasology 
-usa outras [mÈtricas](http://jenkins.terasology.org/view/Statistics/):
+O Terasology usa uma ferramenta chamada [Jenkins](http://jenkins.terasology.org/job/Terasology/) para efectuar os testes unit√°rios. Para al√©m dos testes unit√°rios o Terasology 
+usa outras [m√©tricas](http://jenkins.terasology.org/view/Statistics/):
 
-- Checkstyle - verifica o estilo de cÛdigo, convens„o para garantir a uniformidade do cÛdigo no projecto.
-- FindBugs - identifica cÛdigo que possa levar *bugs*.
+- Checkstyle - verifica o estilo de c√≥digo, convens√£o para garantir a uniformidade do c√≥digo no projecto.
+- FindBugs - identifica c√≥digo que possa levar *bugs*.
 - PMD - verifica o estilo, problemas comuns, etc.
-- Open Tasks - procura TUDO *tags* no cÛdigo para identificar que algo necessita ser feito.
-- Static analysis - combina todas as mÈtricas anteriores.
-- Code coverage - quantas linhas de cÛdigo foram cobertas pelos testes unit·rios.
+- Open Tasks - procura TUDO *tags* no c√≥digo para identificar que algo necessita ser feito.
+- Static analysis - combina todas as m√©tricas anteriores.
+- Code coverage - quantas linhas de c√≥digo foram cobertas pelos testes unit√°rios.
 
-As mesmas mÈtricas est„o disponÌveis para os mÛdulos embora n„o se apliquem a todos os mÛdulos. Em alguns dos mÛdulos n„o 
-s„o feitos testes, porque os autores n„o os fizeram.
+As mesmas m√©tricas est√£o dispon√≠veis para os m√≥dulos embora n√£o se apliquem a todos os m√≥dulos. Em alguns dos m√≥dulos n√£o 
+s√£o feitos testes, porque os autores n√£o os fizeram.
 
-Neste projecto apesar de n„o serem feitos testes sufecientes aos mÛdulos È de se notar que h· v·rios testes a ser feitos ao *engine*, o 
-principal componente deste projecto. Os testes aos mÛdulos dependem dos teste ‡ *engine* e os testes ‡ engine dependem 
+Neste projecto apesar de n√£o serem feitos testes sufecientes aos m√≥dulos √© de se notar que h√° v√°rios testes a ser feitos ao *engine*, o 
+principal componente deste projecto. Os testes aos m√≥dulos dependem dos teste √† *engine* e os testes √† engine dependem 
 da *engine*. 
 
-Por ˙ltimo antes de um *release* do Terasology s„o feitos pelo gestor do Terasology testes manuais, onde È corrido v·rias vezes 
-o jogo em ambientes diferentes, mas esta tarefa torna difÌcil testar todos os mÛdulos.
+Por √∫ltimo antes de um *release* do Terasology s√£o feitos pelo gestor do Terasology testes manuais, onde √© corrido v√°rias vezes 
+o jogo em ambientes diferentes, mas esta tarefa torna dif√≠cil testar todos os m√≥dulos.
 
 ##### Como melhorar a testabilidade dos componentes de *software*
-A testabilidade de componentes de *software* (classes e mÛdulos) È determinada por alguns factores, como por exemplo:
+A testabilidade de componentes de *software* (classes e m√≥dulos) √© determinada por alguns factores, como por exemplo:
 
 - Controlabilidade
 - Observabilidade
 - Isolabilidade
-- SeparaÁ„o de PreocupaÁıes
+- Separa√ß√£o de Preocupa√ß√µes
 - Compreensabilidade
 - Heterogeneidade
 
-Apesar de acharmos que este projecto est· bem arquitecturado (por suportar *modding*, por exemplo), a testabilidade dos 
+Apesar de acharmos que este projecto est√° bem arquitecturado (por suportar *modding*, por exemplo), a testabilidade dos 
 componentes de *software* do Tresasoly poderia ser melhorada em muitos aspectos.
-Como j· foi referido por v·rias vezes anteriormente, este projecto depende muito da vontade dos contribuidores 
-e um exemplo disso È o cÛdigo contribuido, que nem sempre È acompanhado de testes. Este È um aspecto que poderia ser melhorado, 
-por exemplo, um dos gestores do projecto deveria ser respons·vel por criar um n˙mero de testes unit·rios a que todos os mÛdulos fossem 
-submetidos. AlÈm disso todo o cÛdigo contribuido deveria ser acompanhado por testes unit·rios prÛpios, testado e an·lisado
-por mais de um gestor atÈ que fosse concluido que mais testes n„o eram necess·rios. Estes testes deveriam ser feitos de 
-forma automatizada. N„o existindo erros nos testes o mÛdulo poderia ent„o ser juntado ao projecto e de seguida o programa deveria ser 
-testado com o novo mÛdulo adicionado.
+Como j√° foi referido por v√°rias vezes anteriormente, este projecto depende muito da vontade dos contribuidores 
+e um exemplo disso √© o c√≥digo contribuido, que nem sempre √© acompanhado de testes. Este √© um aspecto que poderia ser melhorado, 
+por exemplo, um dos gestores do projecto deveria ser respons√°vel por criar um n√∫mero de testes unit√°rios a que todos os m√≥dulos fossem 
+submetidos. Al√©m disso todo o c√≥digo contribuido deveria ser acompanhado por testes unit√°rios pr√≥pios, testado e an√°lisado
+por mais de um gestor at√© que fosse concluido que mais testes n√£o eram necess√°rios. Estes testes deveriam ser feitos de 
+forma automatizada. N√£o existindo erros nos testes o m√≥dulo poderia ent√£o ser juntado ao projecto e de seguida o programa deveria ser 
+testado com o novo m√≥dulo adicionado.
 
-Deveriam ser efectuados teste adicionais aos testes unit·rios, como por exemplo, testes de integraÁ„o e testes ao sistema, 
-para que tal fosse possÌvel deveria ser acrescentada uma equipa de testes a equipa do Terasology.
+Deveriam ser efectuados teste adicionais aos testes unit√°rios, como por exemplo, testes de integra√ß√£o e testes ao sistema, 
+para que tal fosse poss√≠vel deveria ser acrescentada uma equipa de testes a equipa do Terasology.
 
-Outro aspecto que poderia ser melhorado È a documentaÁ„o dos testes, apesar de existir 
-[documentac„o](http://jenkins.terasology.org/job/Terasology/javadoc/) do projecto em *javadoc*, a documentaÁ„o dos testes 
-que foram observados È enixistente.
+Outro aspecto que poderia ser melhorado √© a documenta√ß√£o dos testes, apesar de existir 
+[documentac√£o](http://jenkins.terasology.org/job/Terasology/javadoc/) do projecto em *javadoc*, a documenta√ß√£o dos testes 
+que foram observados √© enixistente.
 
-Estes s„o alguns dos pontos que poderiam ser melhorados, estas sugestıes poderiam melhorar a qualidade de *software* do 
+Estes s√£o alguns dos pontos que poderiam ser melhorados, estas sugest√µes poderiam melhorar a qualidade de *software* do 
 Terasology.
 
-#### EstatÌsticas de Teste
+#### Estat√≠sticas de Teste
 
 Poderemos analisar algumas [estatisticas](http://jenkins.terasology.org/job/Terasology/test/?width=800&height=600) de testes 
-realizados no ˙ltimo *build* (testes realizados ao engine). 
+realizados no √∫ltimo *build* (testes realizados ao engine). 
 
-A ferramenta utilizada È chamada Jenkins, no *link* das [estatisticas](http://jenkins.terasology.org/job/Terasology/test/?width=800&height=600)
-podemos observar um grafico que mostra os ˙ltimos testes realizados ao *engine*. No eixo dos "xx" È o numero do teste 
-(#1560 ˙ltimo teste) e no eixo dos "yy" È o numero dos testes efectuados (471 testes efectuados no ˙ltimo teste).
+A ferramenta utilizada √© chamada Jenkins, no *link* das [estatisticas](http://jenkins.terasology.org/job/Terasology/test/?width=800&height=600)
+podemos observar um grafico que mostra os √∫ltimos testes realizados ao *engine*. No eixo dos "xx" √© o numero do teste 
+(#1560 √∫ltimo teste) e no eixo dos "yy" √© o numero dos testes efectuados (471 testes efectuados no √∫ltimo teste).
 
-No lado esquerdo do gr·fico temos v·rios *links* de estatÌsticas de teste como *Checkstyle Warnings*,  *FindBugs Warnings*,
+No lado esquerdo do gr√°fico temos v√°rios *links* de estat√≠sticas de teste como *Checkstyle Warnings*,  *FindBugs Warnings*,
 *PMD Warnings*, *Open Tasks*, etc. Analisando um destes *links*, por exemplo, *FindBugs Warnings* podemos ver os detalhes 
-das estatÌsticas por *package*, ficheiros, categorias, etc. TambÈm podemos ver o nÌvel do *warning* (*normal* ou *high*).
+das estat√≠sticas por *package*, ficheiros, categorias, etc. Tamb√©m podemos ver o n√≠vel do *warning* (*normal* ou *high*).
 
-Outro *link* importante È o *status* onde podemos analisar os resultados dos testes. Para o ˙ltimo teste realisado foram 
+Outro *link* importante √© o *status* onde podemos analisar os resultados dos testes. Para o √∫ltimo teste realisado foram 
 obtidos os seguintes resultados: *Checkstyle Warnings*: 315, *FindBugs Warnings*: 215, *PMD Warnings*: 336, *Open Tasks*: 319, 
-*Latest Test Result (no failures)*. Para cada um destes resultados temos um gr·fico do lado direito.
+*Latest Test Result (no failures)*. Para cada um destes resultados temos um gr√°fico do lado direito.
 
-E por ˙ltimo a seguir aos *links* temos uma tabela com informaÁıes dos ˙ltimos testes realizados, como por exemplo o dia 
+E por √∫ltimo a seguir aos *links* temos uma tabela com informa√ß√µes dos √∫ltimos testes realizados, como por exemplo o dia 
 e a hora em que foi feito o teste.
 
-Estes s„o alguns dos exemplos de algumas estatÌsticas de testes realizados no Terasology. … de refererir que o Jenkins È 
-um servidor *online* com *plugins* para testes que s„o feitos virtualmente.
+Estes s√£o alguns dos exemplos de algumas estat√≠sticas de testes realizados no Terasology. √â de refererir que o Jenkins √© 
+um servidor *online* com *plugins* para testes que s√£o feitos virtualmente.
 
-#### Conclus„o
-Sendo este projecto um jogo, j· tivemos a opotunidade de o exprimentar onde foram detetados alguns *bugs*, nomeadamente na selecÁ„o 
-de alguns mÛdulos, o que prova que as *releases* que est„o a ser feitas contÍm *bugs*. Estes *bugs* talvez podessem
+#### Conclus√£o
+Sendo este projecto um jogo, j√° tivemos a opotunidade de o exprimentar onde foram detetados alguns *bugs*, nomeadamente na selec√ß√£o 
+de alguns m√≥dulos, o que prova que as *releases* que est√£o a ser feitas cont√™m *bugs*. Estes *bugs* talvez podessem
 ser encontrados se fossem feitos mais testes ao *software*.
-Esta È uma das formas que o Terasology usa na deteÁ„o de *bugs*, atravÈs dos utilizadores do jogo que reportam bugs encontrados 
+Esta √© uma das formas que o Terasology usa na dete√ß√£o de *bugs*, atrav√©s dos utilizadores do jogo que reportam bugs encontrados 
 no decorrer do jogo.
-Este ser· um dos maiores problemas neste projecto, a falta de testes, mas È um problema que n„o est· ser ignorado.
-Um dos gestores mais activos deste projecto (Cervator), est· constantemente a tentar melhorar a qualidade deste projecto e 
-os teste s„o um dos temas que ele est· a tentar melhorar.
+Este ser√° um dos maiores problemas neste projecto, a falta de testes, mas √© um problema que n√£o est√° ser ignorado.
+Um dos gestores mais activos deste projecto (Cervator), est√° constantemente a tentar melhorar a qualidade deste projecto e 
+os teste s√£o um dos temas que ele est√° a tentar melhorar.
 
 
-##### ReferÍncias
-[WikipÈdia](https://en.wikipedia.org/wiki/Software_testing)
+##### Refer√™ncias
+[Wikip√©dia](https://en.wikipedia.org/wiki/Software_testing)
 
-[FÛrum](http://forum.terasology.org/threads/development-methodology-and-hi-students-from-porto.1387/)
+[F√≥rum](http://forum.terasology.org/threads/development-methodology-and-hi-students-from-porto.1387/)
 criado para o fim deste projecto pelo Organizador de Projectos do Terasology
 
-Slides das aulas teÛricas
+Slides das aulas te√≥ricas
 
 #### Lista dos contribuidores 
 
 #####Grupo 6
-* Francisco Veiga (0 horas)
+* Francisco Veiga (10 horas)
 * Paulo Peixoto (0 horas)
 * Vasco Pereira (0 horas)
-* Filipe Galv„o (0 horas)
+* Filipe Galv√£o (0 horas)
 
 ###### FEUP 2016 MIEIC
