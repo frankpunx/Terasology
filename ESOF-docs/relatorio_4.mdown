@@ -1,0 +1,135 @@
+# ESOF
+# RELATÓRIO 4 - Testes de *Software* 
+## Terasology
+
+#### Introdução
+
+Neste relatório iremos abordar o tema de Testes de *Software* em engenharia de *software*, e identificar alguns aspectos
+relacionados com o nível de testabilidade deste projecto, assim como, iremos analisar algumas estatísticas de testes realizados.
+
+Os testes de *software* permitem obter informações acerca do produto que está a ser testado. Está é uma fase muito importante 
+no desenvolvimento de *software*, permite aos participantes no desenvolvimento do produto detetar possíveis erros e falhas 
+melhorando, assim, a qualidade do produto.
+
+Os testes de software podem passar por várias fases de testes sendo elas: testes unitários, testes de integração, 
+testes de sistema, testes de aceitação e testes de operação, etc.
+
+#### Grau de Testabilidade Terasology
+
+O Terasology sendo um projecto de pequena dimensão e de *open sorce* funcionado, quase, de forma "experimental" não é submetido
+a testes de *software* rigorosos. Das várias fases de teste o terasology é apenas submetido a testes unitários feitos pelos 
+progamadores, que do nosso ponto de vista são insufecientes para garantir uma excelente qualidade do *software*. Seriam 
+necessários os outros testes para que isso acontece-se, contudo, só efetuar testes não garante que o *software* esteja livre de erros.
+
+Como o referido no relatório anterior a arquitectura deste projecto suporta *modding*, sendo esta arquitectura reseliente 
+a erros e mudanças, isto é, se à versão atual que está em funcionamento for adicionado um módulo que contenha *bugs* ou erros, 
+este não deverá parar o resto do funcionamento da *engine*. Este é um aspecto favorável na deteção de erros, se ao testar um 
+módulo for detetado um erro sempre se pode excluir este módulo até esse erro ser corrigido.
+
+A maior parte dos testes unitários utilizados no Terasology são códificados em JUnit e são executados sempre que há um *engine build* 
+ou alguém faz um *pull request*. Desta forma os gestores do projecto conseguem perceber se todo o código que cobriram com 
+os testes unitários continua a funcionar depois do *pull request* ou do *engine build*, contudo Cervator admite que os 
+própios testes podem ter erros, o que uma vez mais indica a insufeciência e a "qualidade" de testes neste projecto. Estes testes 
+também ajudam a perceber se um determinado *pull request* falha um destes testes ou se as métricas pioraram.
+
+O Terasology usa uma ferramenta chamada [Jenkins](http://jenkins.terasology.org/job/Terasology/) para efectuar os testes unitários. Para além dos testes unitários o Terasology 
+usa outras [métricas](http://jenkins.terasology.org/view/Statistics/):
+
+- Checkstyle - verifica o estilo de código, convensão para garantir a uniformidade do código no projecto.
+- FindBugs - identifica código que possa levar *bugs*.
+- PMD - verifica o estilo, problemas comuns, etc.
+- Open Tasks - procura TUDO *tags* no código para identificar que algo necessita ser feito.
+- Static analysis - combina todas as métricas anteriores.
+- Code coverage - quantas linhas de código foram cobertas pelos testes unitários.
+
+As mesmas métricas estão disponíveis para os módulos embora não se apliquem a todos os módulos. Em alguns dos módulos não 
+são feitos testes, porque os autores não os fizeram.
+
+Neste projecto apesar de não serem feitos testes sufecientes aos módulos é de se notar que há vários testes a ser feitos ao *engine*, o 
+principal componente deste projecto. Os testes aos módulos dependem dos teste à *engine* e os testes à engine dependem 
+da *engine*. 
+
+Por último antes de um *release* do Terasology são feitos pelo gestor do Terasology testes manuais, onde é corrido várias vezes 
+o jogo em ambientes diferentes, mas esta tarefa torna difícil testar todos os módulos.
+
+##### Como melhorar a testabilidade dos componentes de *software*
+A testabilidade de componentes de *software* (classes e módulos) é determinada por alguns factores, como por exemplo:
+
+- Controlabilidade
+- Observabilidade
+- Isolabilidade
+- Separação de Preocupações
+- Compreensabilidade
+- Heterogeneidade
+
+Apesar de acharmos que este projecto está bem arquitecturado (por suportar *modding*, por exemplo), a testabilidade dos 
+componentes de *software* do Tresasoly poderia ser melhorada em muitos aspectos.
+Como já foi referido por várias vezes anteriormente, este projecto depende muito da vontade dos contribuidores 
+e um exemplo disso é o código contribuido, que nem sempre é acompanhado de testes. Este é um aspecto que poderia ser melhorado, 
+por exemplo, um dos gestores do projecto deveria ser responsável por criar um número de testes unitários a que todos os módulos fossem 
+submetidos. Além disso todo o código contribuido deveria ser acompanhado por testes unitários própios, testado e análisado
+por mais de um gestor até que fosse concluido que mais testes não eram necessários. Estes testes deveriam ser feitos de 
+forma automatizada. Não existindo erros nos testes o módulo poderia então ser juntado ao projecto e de seguida o programa deveria ser 
+testado com o novo módulo adicionado.
+
+Deveriam ser efectuados teste adicionais aos testes unitários, como por exemplo, testes de integração e testes ao sistema, 
+para que tal fosse possível deveria ser acrescentada uma equipa de testes a equipa do Terasology.
+
+Outro aspecto que poderia ser melhorado é a documentação dos testes, apesar de existir 
+[documentacão](http://jenkins.terasology.org/job/Terasology/javadoc/) do projecto em *javadoc*, a documentação dos testes 
+que foram observados é enixistente.
+
+Estes são alguns dos pontos que poderiam ser melhorados, estas sugestões poderiam melhorar a qualidade de *software* do 
+Terasology.
+
+#### Estatísticas de Teste
+
+Poderemos analisar algumas [estatisticas](http://jenkins.terasology.org/job/Terasology/test/?width=800&height=600) de testes 
+realizados no último *build* (testes realizados ao engine). 
+
+A ferramenta utilizada é chamada Jenkins, no *link* das [estatisticas](http://jenkins.terasology.org/job/Terasology/test/?width=800&height=600)
+podemos observar um grafico que mostra os últimos testes realizados ao *engine*. No eixo dos "xx" é o numero do teste 
+(#1560 último teste) e no eixo dos "yy" é o numero dos testes efectuados (471 testes efectuados no último teste).
+
+No lado esquerdo do gráfico temos vários *links* de estatísticas de teste como *Checkstyle Warnings*,  *FindBugs Warnings*,
+*PMD Warnings*, *Open Tasks*, etc. Analisando um destes *links*, por exemplo, *FindBugs Warnings* podemos ver os detalhes 
+das estatísticas por *package*, ficheiros, categorias, etc. Também podemos ver o nível do *warning* (*normal* ou *high*).
+
+Outro *link* importante é o *status* onde podemos analisar os resultados dos testes. Para o último teste realisado foram 
+obtidos os seguintes resultados: *Checkstyle Warnings*: 315, *FindBugs Warnings*: 215, *PMD Warnings*: 336, *Open Tasks*: 319, 
+*Latest Test Result (no failures)*. Para cada um destes resultados temos um gráfico do lado direito.
+
+E por último a seguir aos *links* temos uma tabela com informações dos últimos testes realizados, como por exemplo o dia 
+e a hora em que foi feito o teste.
+
+Estes são alguns dos exemplos de algumas estatísticas de testes realizados no Terasology. É de refererir que o Jenkins é 
+um servidor *online* com *plugins* para testes que são feitos virtualmente.
+
+#### Conclusão
+Sendo este projecto um jogo, já tivemos a opotunidade de o exprimentar onde foram detetados alguns *bugs*, nomeadamente na selecção 
+de alguns módulos, o que prova que as *releases* que estão a ser feitas contêm *bugs*. Estes *bugs* talvez podessem
+ser encontrados se fossem feitos mais testes ao *software*.
+Esta é uma das formas que o Terasology usa na deteção de *bugs*, através dos utilizadores do jogo que reportam bugs encontrados 
+no decorrer do jogo.
+Este será um dos maiores problemas neste projecto, a falta de testes, mas é um problema que não está ser ignorado.
+Um dos gestores mais activos deste projecto (Cervator), está constantemente a tentar melhorar a qualidade deste projecto e 
+os teste são um dos temas que ele está a tentar melhorar.
+
+
+##### Referências
+[Wikipédia](https://en.wikipedia.org/wiki/Software_testing)
+
+[Fórum](http://forum.terasology.org/threads/development-methodology-and-hi-students-from-porto.1387/)
+criado para o fim deste projecto pelo Organizador de Projectos do Terasology
+
+Slides das aulas teóricas
+
+#### Lista dos contribuidores 
+
+#####Grupo 6
+* Francisco Veiga (0 horas)
+* Paulo Peixoto (0 horas)
+* Vasco Pereira (0 horas)
+* Filipe Galvão (0 horas)
+
+###### FEUP 2016 MIEIC
