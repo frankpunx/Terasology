@@ -18,12 +18,12 @@ package org.terasology.rendering.backdrop;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.glu.Sphere;
 import org.terasology.asset.Assets;
-import org.terasology.editor.EditorRange;
 import org.terasology.math.TeraMath;
 import org.terasology.math.geom.Vector3f;
 import org.terasology.registry.CoreRegistry;
 import org.terasology.rendering.assets.material.Material;
 import org.terasology.rendering.cameras.Camera;
+import org.terasology.rendering.nui.properties.Range;
 import org.terasology.world.sun.CelestialSystem;
 
 import static org.lwjgl.opengl.GL11.GL_BACK;
@@ -41,13 +41,13 @@ import static org.lwjgl.opengl.GL11.glNewList;
  * @author Anthony Kireev
  * @author Benjamin Glatzel
  */
-public class Skysphere implements BackdropProvider, BackdropRenderer{
+public class Skysphere implements BackdropProvider, BackdropRenderer {
 
     private static int displayListSphere = -1;
 
-    @EditorRange(min = 0.01f, max = 100.0f)
+    @Range(min = 0.01f, max = 100.0f)
     private float colorExp = 0.01f;
-    @EditorRange(min = 2.0f, max = 32.0f)
+    @Range(min = 2.0f, max = 32.0f)
     private float turbidity = 9.0f;
 
     private final CelestialSystem celSystem;
@@ -56,6 +56,7 @@ public class Skysphere implements BackdropProvider, BackdropRenderer{
         celSystem = CoreRegistry.get(CelestialSystem.class);
     }
 
+    @Override
     public void render(Camera camera) {
         glDepthMask(false);
 
@@ -97,10 +98,12 @@ public class Skysphere implements BackdropProvider, BackdropRenderer{
         glCallList(displayListSphere);
     }
 
+    @Override
     public float getSunPositionAngle() {
         return celSystem.getSunPosAngle();
     }
 
+    @Override
     public float getDaylight() {
         float angle = (float) Math.toDegrees(TeraMath.clamp(Math.cos(getSunPositionAngle())));
         float daylight = 1.0f;
@@ -112,14 +115,17 @@ public class Skysphere implements BackdropProvider, BackdropRenderer{
         return daylight;
     }
 
+    @Override
     public float getTurbidity() {
         return turbidity;
     }
 
+    @Override
     public float getColorExp() {
         return colorExp;
     }
 
+    @Override
     public Vector3f getQuantizedSunDirection(float stepSize) {
         float sunAngle = (float) Math.floor(getSunPositionAngle() * stepSize) / stepSize + 0.0001f;
         Vector3f sunDirection = new Vector3f(0.0f, (float) Math.cos(sunAngle), (float) Math.sin(sunAngle));
@@ -132,6 +138,7 @@ public class Skysphere implements BackdropProvider, BackdropRenderer{
         return sunDirection;
     }
 
+    @Override
     public Vector3f getSunDirection(boolean moonlightFlip) {
         float sunAngle = getSunPositionAngle() + 0.0001f;
         Vector3f sunDirection = new Vector3f(0.0f, (float) Math.cos(sunAngle), (float) Math.sin(sunAngle));
