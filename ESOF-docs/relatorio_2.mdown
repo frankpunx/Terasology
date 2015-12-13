@@ -147,7 +147,7 @@ capaz de "se situar" quando precisar de começar a codificar, compreendendo a fo
 em um nível global, está a ser feita, mas sem conhecer necessariamente os detalhes de implementação aprofundados.
 
 ##### Diagrama de casos de utilização do Terasology
-![Use cases Terasology](https://github.com/frankpunx/Terasology/blob/master/ESOF-docs/useCases.png.PNG)
+![Use cases Terasology](https://github.com/frankpunx/Terasology/blob/master/ESOF-docs/use_cases.PNG)
 
 #### Validação de Requisitos
 
