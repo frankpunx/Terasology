@@ -1,0 +1,48 @@
+# ESOF
+# RELATÓRIO 5 - Evolução de Software 
+## Terasology
+
+#### Introdução
+Nesta fase do trabalho foi pedido que se  identificasse e implementasse uma *feature* no projeto do Terasology.
+
+Depois de algum tempo a decidir como é que poderiamos contribuir para o projecto, decidimos adicionar uma *feature* ao menu do jogo, 
+que consiste em ter uma opção de ter os menus em Português. 
+
+Depois de analisar o código e tentar perceber como adicionar esta *feature*, decidimos contactar o gestor do projecto Cervator e explicar o 
+que pretendiamos fazer. Cervator informou-nos que para que tal fosse possível bataria faze-lo no [Terasology Weblate](http://translate.terasology.org/), 
+e nem seria necessário fazer alterações no código visto que é feito através do Weblate.
+Para adicionar o edioma tivemos de ir aos [projetos](http://translate.terasology.org/#projects) escolher o [Terasology](http://translate.terasology.org/projects/terasology/)
+e novamente escolher a componete [menu](http://translate.terasology.org/projects/terasology/menu/). Aqui podemos adicionar o edioma (Português).
+Depois de ter feito esta submissão tivemos de esperar que o ficheiro menu_pt.lang fosse adicionado a engine/src/main/resources/assets/i18n/, tal
+foi feito por um dos colaboradores do terasology num [commit](https://github.com/MovingBlocks/Terasology/commit/679e4ae9fca2fc9e721e72a9070ecec39b3841ef).
+Depois de adicionado este ficheiro fizemos a tradução no [Weblate](http://translate.terasology.org/projects/terasology/menu/pt/). O commit
+desta alteração pode ser verificado [aqui](https://github.com/MovingBlocks/Terasology/commit/4be6feeb3b5c5b052c10fd98100d60d1f8d7bd5f).
+
+Para além de termos adicionado o edioma Português ao menu também fizemos o mesmo processo para o projecto CrashReporter tendo adicionado 
+o edioma Português a componente de [menssagens](http://translate.terasology.org/projects/crashreporter/messages/) e também traduzimos 
+todas as menssagens.
+
+O projeto do Weblate [TerasologyLaucher](http://translate.terasology.org/projects/terasologylauncher/) já tinha o edioma Português adicionado, 
+no entanto, não tinha muitas traduções feitas, acabamos por dar o nosso contributo e fazer todas as traduções para Português das duas componentes 
+[menu](http://translate.terasology.org/projects/terasologylauncher/labels/pt/) e [menssagens](http://translate.terasology.org/projects/terasologylauncher/messages/).
+
+Com esta contribuição o menu, menssagens do CrashReporter, menssagens e *labels* do TerasologyLauncher ficaram com tradução em Português 
+para os utilizadores que pretendem ver estas opções em Português.
+
+Aqui poderam ser verificadas as contribuições:
+
+* [Contribuições](http://translate.terasology.org/user/frankpunx/)
+
+##### Referências
+
+[Fórum](http://forum.terasology.org/threads/development-methodology-and-hi-students-from-porto.1387/)
+criado para o fim deste projecto pelo Organizador de Projectos do Terasology
+
+Slides das aulas teóricas
+
+#### Lista dos contribuidores 
+
+#####Grupo 6
+* Francisco Veiga (6 horas)
+
+###### FEUP 2016 MIEIC
