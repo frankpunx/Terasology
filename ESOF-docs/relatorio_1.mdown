@@ -59,7 +59,7 @@ Visto que a colaboração é remota e, por vezes, os colaboradores não se conhe
 ### Simplicidade
 
 Como o projecto é *open source*, verifica-se a simplicidade do código desenvolvido pelos colaboradores, 
-mantendo a uniformidade do mesmo, código comentado e organização do repositório.
+mantendo a uniformidade do mesmo, código um pouco comentado e organização do repositório.
 
 
 ### Comentários
@@ -77,11 +77,9 @@ receber comentários ao seu código, o que facilita a aceitação por parte dos 
 alterações ao seu código.
 
 
-É de se notar que este projecto não só segue os quatro valores do XP Programing, mas também algumas das suas práticas,
-como por exemplo: 
+Também se poderá afirmar que o Terasology segue alumas práticas semelhantes às de XP Programing, sendo elas:
 * *Small Releases* - *Pre Alpha-Releases*
 * *Simple Design* - Este projecto mantem um *design* e uma interface de utilizador simples
-* *Test-driven Development* - São feitos alguns testes a partes de funcionalidades
 * *Refactoring* - É de se notar a não duplicidade do código
 * *Collective Code Ownership* - Neste projecto qualquer *developer* pode trabalhar em qualquer parte da base de código
 
