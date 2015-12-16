@@ -20,8 +20,8 @@ razões para tal:
  * Permitir a introdução de novas funcionalidades fora da *engine* (não havendo necessidade de alterar o ficheiro .jar).
  * Permite *modding* sem codificação em java.
  * Codificar em modulos de maneira a que seja fácil de usar, poderoso e fácil de conectar a sistemas existentes.
- * Resiliente a erros e mudança. Um erro ocurrido num *mod* não deverá interrumper o funcionamento do jogo. Se um *mod*
- for atualizado com componentes alterados, se exitirem *saves* não deveram sufrer roturas.
+ * Resiliente a erros e mudança. Um erro ocurrido num *mod* não deverá interromper o funcionamento do jogo. Se um *mod*
+ for atualizado com componentes alterados, se exitirem *saves* não deveram sofrer roturas.
  * Ser rasoavelmente seguro.
  
 * Separação entre as preocupações da *engine* e da lógica do jogo/*assets*. A *engine* deve-se preocupar com as *core features* 
