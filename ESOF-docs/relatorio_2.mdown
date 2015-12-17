@@ -235,8 +235,8 @@ Slides das aulas teóricas
 
 #####Grupo 6
 * Francisco Veiga (37.5%)
-* Paulo Peixoto (30%)
-* Vasco Pereira (20%)
+* Paulo Peixoto (20%)
+* Vasco Pereira (30%)
 * Filipe Galvão (12.5%)
 
 ###### FEUP 2016 MIEIC
